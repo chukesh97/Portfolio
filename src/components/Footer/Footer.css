@@ -1,0 +1,153 @@
+.container{
+    display: grid;
+    grid-template-columns: 5rem repeat(3, 1fr) 5rem;
+    grid-template-rows: 1fr;
+    align-items: center;
+    height: 10rem;
+    background-color: #EEE9DA;
+    color:#000;
+}
+.copy{
+   grid-column: 2/3;
+   font-weight: 600;
+}
+/*................. back to top button................. */
+.top{
+    display: flex;
+    justify-content: center;
+}
+.Btn {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#BDCDD6,#ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    z-index:2;
+  }
+  
+  .arrow path {
+    fill: rgb(0, 0, 0);
+  }
+  
+  .text{
+    font-size: 0.7em;
+    width: 100px;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -18px;
+    opacity: 0;
+    transition-duration: .7s;
+  }
+  
+  .Btn:hover .text {
+    opacity: 1;
+    transition-duration: .7s;
+  }
+  
+  .Btn:hover .arrow {
+    animation:slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  /*................. back to top button ends................. */
+  /*................. social links................. */
+  .social-icons{
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+  }
+  .social-links{
+      color: #000000;
+      cursor: pointer;
+  }
+  .social-links:hover{
+      color: #3498db;
+  }
+
+  /* ............Mobile.................. */
+
+@media (max-width:480px){
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    flex-direction: column;
+}
+.Btn {
+  width: 30px;
+  height: 30px;
+}
+}
+/*............Extra small devices.............. */
+@media (min-width: 481px) and (max-width: 767px){
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    flex-direction: column;
+}
+.Btn {
+  width: 30px;
+  height: 30px;
+}
+}
+/* ............Tablet.................. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container{
+    font-size:1.1rem;
+}
+.Btn {
+  width: 30px;
+  height: 30px;
+}
+}
+/* ............Large Tablets / Laptops .............. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container{
+    font-size:1.15rem;
+}
+.Btn {
+  width: 40px;
+  height: 40px;
+}
+}
+/* ............Desktops.............. */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .container{
+    font-size:1.2rem;
+}
+.Btn {
+  width: 50px;
+  height: 50px;
+}
+}
+/* ............Large Desktops.............. */
+@media (min-width: 1920px) {
+  .container{
+    font-size:1.5rem;
+}
+.Btn {
+  width: 60px;
+  height: 60px;
+}
+}

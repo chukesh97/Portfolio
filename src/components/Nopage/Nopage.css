@@ -1,0 +1,16 @@
+.no-page{
+    border: 2px solid #ff000009;
+    border-radius: 4px;
+    margin: 20vh auto;
+    width: 80%;
+    height: auto;
+    padding: 5rem;
+}
+.no-page>h1>span{
+    color: #ff0000;
+}
+.no-page>h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+}

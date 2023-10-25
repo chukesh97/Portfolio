@@ -1,0 +1,212 @@
+.lead{
+    height:100vh;
+    background-image: url('https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b2b5b0b0b0b0b0b0b0b0b0b0b0b0b0b&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.welcome-lead{
+    height:100vh;
+    /* margin-top:-3.188rem; */
+    background-color:#217dbbce;
+}
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#welcome-section>img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 1rem rgba(255,255,255,.6);
+    margin-top: 1.5rem;
+    
+}
+#welcome-section>h1 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 4em;
+    margin-top:1rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap:0.5rem;
+    letter-spacing: 0.05em;
+    line-height: 0.8em;
+}
+#welcome-section>h2 {
+    color: #fff;
+    padding: 0.5rem;
+    font-weight: 650;
+    font-size: 2em;
+}
+
+#welcome-section>a{
+    display: inline-block;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border: 3px solid #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: .5s ease all;
+}
+#welcome-section>a:hover{
+    background-color: #fff;
+    color:#217dbb;;
+}
+.social{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.social a:nth-child(1){
+    display: grid;
+    color: #fff;
+    align-items: center;
+    grid-column:3/4;
+    font-size: 2em;
+    padding: 0.5rem;
+    transition: .5s ease all;
+}
+.social a:nth-child(1):hover,
+.social a:nth-child(2):hover{
+    color: #000000;
+}
+.social a:nth-child(2){
+    display: grid;
+    color: #fff;
+    align-items: center;
+    grid-column:4/5;
+    font-size: 2em;
+    padding: 0.5rem;
+    transition: .5s ease all;
+}
+
+/*............................Media query................ */
+
+
+/* ............Mobile.................. */
+
+@media(max-width:480px){
+    .lead{
+        height:80vh;
+    }
+    .welcome-lead{
+        height:80vh;
+    }
+    #welcome-section{
+        height:80vh;
+        margin-top: 0rem;
+        padding:2rem;
+    }
+    #welcome-section img{
+        width: 180px;
+        height: 180px;
+    }
+    #welcome-section>h1 {
+        font-size: 1.8rem;
+    }
+    #welcome-section>h2 {
+        font-size: 1rem;
+    }
+    #welcome-section>a{
+        display: inline-block;
+        color: #fff;
+        padding: 0.7rem 1rem;
+        border: 2px solid #fff;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: .5s ease all;
+    }
+
+}
+ /*............Extra small devices.............. */
+@media (min-width: 481px) and (max-width: 767px){
+    #welcome-section{
+        margin-top: 0rem;
+        padding:3rem;
+    }
+    #welcome-section img{
+        width: 250px;
+        height: 250px;
+    }
+    #welcome-section h1 {
+        font-size: 2.5rem;
+    }
+    #welcome-section h2 {
+        font-size: 1.5rem;
+    }
+    
+}
+
+/* ............Tablet.................. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #welcome-section{
+        margin-top: 0rem;
+        padding:3rem;
+    }
+    #welcome-section img{
+        width: 250px;
+        height: 250px;
+    }
+    #welcome-section h1 {
+        font-size: 3em;
+    }
+    #welcome-section h2 {
+        font-size: 1.5em;
+    }
+   
+}
+/* ............Large Tablets / Laptops .............. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #welcome-section{
+        margin-top: 0rem;
+        padding:3rem;
+    }
+    #welcome-section img{
+        width: 250px;
+        height: 250px;
+    }
+    #welcome-section h1 {
+        font-size: 3em;
+    }
+    #welcome-section h2 {
+        font-size: 1.5em;
+    }
+    
+}
+/* ............Desktops.............. */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+    #welcome-section img{
+        margin-top: 4rem;
+        margin-bottom:0.5rem ;
+        width: 250px;
+        height: 250px;
+    }
+    #welcome-section h1 {
+        font-size: 4em;
+    }
+    #welcome-section h2 {
+        font-size: 2em;
+    }
+    
+}
+/* ............Large Desktops.............. */
+@media (min-width: 1920px) {
+    #welcome-section img{
+        width: 400px;
+        height: 400px;
+    }
+    #welcome-section h1 {
+        font-size: 6em;
+    }
+    #welcome-section h2 {
+        font-size: 3em;
+    }
+   
+}
+
+
