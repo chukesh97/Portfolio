@@ -1,13 +1,12 @@
 import "./Lead.css";
-import Pic from "./Profile.png";
+import svg from "../Lead/lead.svg";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Lead() {
   return (
-    <div className="lead">
       <div className="welcome-lead">
+        <img src={svg} alt="svg" />
         <div id="welcome-section">
-          <img src={Pic} alt="Profile-Pic" />
           <h1>Chukesh Goud</h1>
           <h2>Front-End Developer</h2>
           <a href="https://drive.google.com/file/d/1QYICQmKx5gHHKYMeXHJIaiAbinRcdta8/view?usp=drivesdk" download="https://drive.google.com/file/d/1QYICQmKx5gHHKYMeXHJIaiAbinRcdta8/view?usp=drivesdk">Download Resume</a>
@@ -30,6 +29,5 @@ export default function Lead() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
