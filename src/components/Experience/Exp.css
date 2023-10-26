@@ -39,3 +39,31 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     gap: 1rem;
 }
+
+/* ............Mobile.................. */
+
+@media (max-width:480px){
+    #experience{
+        display: grid;
+        grid-template-rows: 0.2fr 0.3fr 0.2fr;
+        gap: 1rem;
+    }
+    #experience>div:nth-child(2){
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+}
+/*............Extra small devices.............. */
+
+@media (min-width: 481px) and (max-width: 767px){
+    #experience{
+        gap: 2rem;
+    }
+}
+/* ............Tablet.................. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #experience{
+        gap: 2rem;
+    }
+}
