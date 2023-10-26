@@ -10,7 +10,7 @@ export default function Lead() {
           <img src={Pic} alt="Profile-Pic" />
           <h1>Chukesh Goud</h1>
           <h2>Front-End Developer</h2>
-          <a herf="">Download Resume</a>
+          <a href="portfolio-app\public\S Chukesh Goud- Resume.pdf" download="S Chukesh Goud- Resume.pdf">Download Resume</a>
 
           <div className="social">
             <a
