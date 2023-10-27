@@ -20,10 +20,18 @@ export default function Footer() {
         </p>
       </div>
       <div className="social-icons">
-        <a className="social-links" href="https://github.com/chukesh97" target="_blank">
+        <a className="social-links" 
+        href="https://github.com/chukesh97"
+        name="github"
+        aria-label="Go to Github" 
+        target="_blank">
           <FaGithubSquare size={30} />
         </a>
-        <a className="social-links" href="https://www.linkedin.com/in/s-chukesh-goud-84a33522a" target="_blank">
+        <a className="social-links"
+         href="https://www.linkedin.com/in/s-chukesh-goud-84a33522a"
+         name="LinkedIn"
+         aria-label="Go to LinkedIn"
+         target="_blank">
           <FaLinkedin size={30} />
         </a>
       </div>
