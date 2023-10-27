@@ -15,6 +15,7 @@ export default function Lead() {
             <a
               href="https://github.com/chukesh97"
               name="github"
+              aria-label="Go to Github"
               target="_blank"
             >
               <FaGithubSquare size={40} />
@@ -22,6 +23,7 @@ export default function Lead() {
             <a
               href="https://www.linkedin.com/in/s-chukesh-goud-84a33522a"
               name="LinkedIn"
+              aria-label="Go to LinkedIn"
               target="_blank"
             >
               <FaLinkedin size={40} />
