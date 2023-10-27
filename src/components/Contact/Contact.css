@@ -41,7 +41,7 @@
 
 #contact-form input::-webkit-input-placeholder,#contact-form textarea::-webkit-input-placeholder {
     font-size:0.85rem;
-    color: #ffffffc1
+    color: #ffffff
 }   
 
 #contact-form input:focus,#contact-form textarea:focus {
