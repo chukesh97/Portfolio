@@ -17,7 +17,7 @@ export default function Nav() {
     }
   };
 
-  const sideRef = useRef();
+  const sideRef = useRef(null);
   
 
   useEffect(() => {
@@ -26,19 +26,19 @@ export default function Nav() {
         setSidebarOpen(false);
       }
     };
-    document.addEventListener("mouseenter", handler);
+    document.addEventListener("mousedown", handler);
     window.addEventListener("scroll", changeBackground);
 
     return () => {
-      document.removeEventListener("mouseenter", handler);
+      document.removeEventListener("mousedown", handler);
     }
 
   }, []);
 
   return (
     <div className="nav">
-      <nav className={navbar ? "navbar active" : "navbar"}>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      <nav className={navbar ? "navbar active" : "navbar"}>
         <ul>
           <li>
             <a href="#about-me">About</a>
@@ -60,6 +60,7 @@ export default function Nav() {
           </li>
         </ul>
       </nav>
+      {/* hamburger......................................................... */}
       <div id="hamburger" onClick={toggleSidebar}>
         <input
           id="checkbox2"
@@ -72,15 +73,16 @@ export default function Nav() {
           <div id="bar5" className="bars"></div>
           <div id="bar6" className="bars"></div>
         </label>
-
+        
+        {/* sidebar........................................................... */}
         <div
           className={sidebarOpen ? "sidebar active" : "sidebar"}
           style={{
             position: sidebarOpen
               ? (document.body.style.overflow = "hidden")
-              : (document.body.style.overflow = "visible"),
-          }}
-          ref={sideRef}>
+              : (document.body.style.overflow = "visible")}}
+            ref={sideRef}>
+
           <ul>
             <li>
               <a href="#about-me">About</a>
