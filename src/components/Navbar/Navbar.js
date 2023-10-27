@@ -26,14 +26,11 @@ export default function Nav() {
         setSidebarOpen(false);
       }
     };
-    document.addEventListener("mousedown", handler);
-    document.addEventListener("touchstart", handler);
+    document.addEventListener("mouseenter", handler);
     window.addEventListener("scroll", changeBackground);
 
     return () => {
-      document.removeEventListener("touchstart", handler);
-      document.removeEventListener("mousedown", handler);
-      window.removeEventListener("scroll", changeBackground);
+      document.removeEventListener("mouseenter", handler);
     }
 
   }, []);
@@ -81,7 +78,7 @@ export default function Nav() {
           style={{
             position: sidebarOpen
               ? (document.body.style.overflow = "hidden")
-              : (document.body.style.overflow = "auto"),
+              : (document.body.style.overflow = "visible"),
           }}
           ref={sideRef}>
           <ul>
