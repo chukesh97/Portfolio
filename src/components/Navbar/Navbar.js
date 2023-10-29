@@ -26,11 +26,11 @@ export default function Nav() {
         setSidebarOpen(false);
       }
     };
-    document.addEventListener("mousedown", handler);
+    document.addEventListener("mouseenter", handler);
     window.addEventListener("scroll", changeBackground);
 
     return () => {
-      document.removeEventListener("mousedown", handler);
+      document.removeEventListener("mouseenter", handler);
     }
 
   }, []);
