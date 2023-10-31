@@ -277,6 +277,9 @@ img{
 }
 /* ............Large Tablets / Laptops .............. */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar ul {
+    gap:0rem
+}
 #hamburger{
     display: none;
 }
