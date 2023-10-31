@@ -38,6 +38,7 @@
     line-height: 0.8em;
 }
 #welcome-section>h2 {
+    font-family:Verdana, sans-serif;
     padding: 0.5rem;
     font-weight: 650;
     font-size: 2em;
