@@ -1,3 +1,9 @@
+@font-face {
+    font-family:TiroBangla-Regular;
+    src: url(./TiroBangla-Regular.ttf);
+}
+
+
 .welcome-lead{
     display: grid;
     justify-content: center;
@@ -8,7 +14,6 @@
 }
 .welcome-lead>img{
     grid-column: 2/3;
-    margin-top: 3rem;
     width: 500px;
     height: 500px;
     
@@ -22,7 +27,8 @@
     gap: 0.8rem;
 }
 #welcome-section>h1 {
-    font-weight: 900;
+    font-family:TiroBangla-Regular;
+    font-weight: 750;
     font-size: 3em;
     justify-content: center;
     align-items: center;
@@ -167,7 +173,6 @@
 /* ............Desktops.............. */
 @media only screen and (min-width: 1200px) and (max-width: 1919px) {
     .welcome-lead>img{
-        margin-top: 4rem;
         margin-bottom:0.5rem ;
         width: 500x;
         height: 500px;

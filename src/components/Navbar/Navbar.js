@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import Logo from "./logo.png";
 import { useState, useEffect, useRef } from "react";
 
 export default function Nav() {
@@ -37,7 +38,7 @@ export default function Nav() {
 
   return (
     <div className="nav">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <img src={Logo} className="App-logo" alt="logo" />
       <nav className={navbar ? "navbar active" : "navbar"}>
         <ul>
           <li>
