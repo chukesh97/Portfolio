@@ -1,89 +1,15 @@
 import "./Navbar.css";
 import Logo from "./logo.png";
-import { useState, useEffect, useRef } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default function Nav() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [navbar, setNavbar] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
-  const changeBackground = () => {
-    if (window.scrollY >= 180) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
-  const sideRef = useRef(null);
-  
-
-  useEffect(() => {
-    let handler = (e) => {
-      if (!sideRef.current.contains(e.target)) {
-        setSidebarOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    window.addEventListener("scroll", changeBackground);
-
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    }
-
-  }, []);
 
   return (
-    <div className="nav">
-        <img src={Logo} className="App-logo" alt="logo" />
-      <nav className={navbar ? "navbar active" : "navbar"}>
-        <ul>
-          <li>
-            <a href="#about-me">About</a>
-          </li>
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
-          <li>
-            <a href="#Education">Education</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      {/* hamburger......................................................... */}
-      <div id="hamburger" onClick={toggleSidebar}>
-        <input
-          id="checkbox2"
-          type="checkbox"
-          checked={sidebarOpen}
-          onChange={() => setSidebarOpen(!sidebarOpen)}
-        />
-        <label className="toggle toggle2">
-          <div id="bar4" className="bars"></div>
-          <div id="bar5" className="bars"></div>
-          <div id="bar6" className="bars"></div>
-        </label>
-        
-        {/* sidebar........................................................... */}
-        <div
-          className={sidebarOpen ? "sidebar active" : "sidebar"}
-          style={{
-            position: sidebarOpen
-              ? (document.body.style.overflow = "hidden")
-              : (document.body.style.overflow = "visible")}}
-            ref={sideRef}>
-
+    <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src={Logo} alt="logo" /></a>
+      <div className='navbar-items'>
           <ul>
             <li>
               <a href="#about-me">About</a>
@@ -105,7 +31,38 @@ export default function Nav() {
             </li>
           </ul>
         </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <div></div>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li>
+                <a href="#about-me">About</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
+                <a href="#Education">Education</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
+  </nav>
   );
 }
