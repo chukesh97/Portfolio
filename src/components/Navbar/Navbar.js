@@ -10,7 +10,7 @@ export default function Nav() {
   };
 
   const changeBackground = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 180) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -26,11 +26,11 @@ export default function Nav() {
         setSidebarOpen(false);
       }
     };
-    document.addEventListener("mouseenter", handler);
+    document.addEventListener("mousedown", handler);
     window.addEventListener("scroll", changeBackground);
 
     return () => {
-      document.removeEventListener("mouseenter", handler);
+      document.removeEventListener("mousedown", handler);
     }
 
   }, []);
