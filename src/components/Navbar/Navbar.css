@@ -19,6 +19,11 @@
   height: 6rem;
   mix-blend-mode:darken;
 }
+.navbar-toggler{
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+}
 .navbar-items{
   text-align: center;
 }
@@ -48,14 +53,24 @@ text-decoration: none;
 background: #eee;
 border-radius: 4px
 }
+
 .navbar-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding:2rem;
   gap: 2.5rem;
+}
+.navbar-nav li{
+  width: 100%;
+  text-align: center;
 }
 .navbar-nav li>a{
   text-decoration: none;
   color: #000;
   font-size: 1.5rem;
+  padding: 0rem 3rem 0rem 3rem;
   letter-spacing: 2px;
   font-weight: 500;
 }
