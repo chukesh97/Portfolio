@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import { Outlet, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Logo from "./logo.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,6 +30,7 @@ useEffect(() => {
 );
 
   return (
+    <>
     <nav class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src={Logo} alt="logo" /></a>
@@ -87,5 +89,7 @@ useEffect(() => {
       </div>
     </div>
   </nav>
+  <Outlet />
+  </>
   );
 }
