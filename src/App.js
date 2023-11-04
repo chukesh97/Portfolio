@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import About from "./pages/About/About";
 import Exp from "./pages/Experience/Exp";
@@ -14,7 +14,7 @@ import Nopage from "./pages/Nopage/Nopage";
 export default function App() {
   return (
     <div className="App">
-     {/* <BrowserRouter>
+     {/*
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Layout />} />
@@ -26,8 +26,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Route>
           <Route path="*" element={<Nopage />} />
-        </Routes>
-      </BrowserRouter> */}
+        </Routes> */}
       <Layout />
       <About />
       <Exp />
