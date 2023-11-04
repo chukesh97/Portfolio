@@ -7,8 +7,8 @@ import Edu from '../components/Education/Edu';
 import Project from '../components/Projects/Project';
 import Skills from '../components/Skills/Skills';
 import Contact from '../components/Contact/Contact';
-import Footer from '../components/Footer/Footer';
 import Top from '../components/GoToTop/Top';
+import Footer from '../components/Footer/Footer';
 
 
 export default function Layout() {
