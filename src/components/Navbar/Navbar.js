@@ -1,46 +1,49 @@
 import "./Navbar.css";
-import { Outlet, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import Logo from "./logo.png";
+import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import 'bootstrap/dist/js/bootstrap.min.js';
 
 export default function Nav() {
 
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const wrapperRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      closeOffcanvas();
+    }
+  };
 
   const toggleOffcanvas = () => {
     setShowOffcanvas(!showOffcanvas);
+    document.body.classList.toggle('no-scroll', showOffcanvas);
   };
 
   const closeOffcanvas = () => {
     setShowOffcanvas(false);
+    document.body.classList.remove('no-scroll');
   };
-useEffect(() => {
-  const hideMenu = () => {
-    if (window.innerWidth > 768 && showOffcanvas) {
-      setShowOffcanvas(false);
-    }
-  };
-  window.addEventListener('resize', hideMenu);
-  return () => {
-    window.removeEventListener('resize', hideMenu);
-  }
-}
-);
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
-    <nav class="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src={Logo} alt="logo" /></a>
-      <div className='navbar-items'>
+    <nav className="navbar">
+    <div className="container-fluid">
+      <a className="navbar-brand" href="#"><img src={Logo} alt="logo" /></a>
+      <div className='navbar-items' data-testid="offcanvasNavbar">
           <ul>
             <li>
               <a href="#about-me">About</a>
             </li>
             <li>
-              <a href="#experience">Experience</a>
+            <a href="#experience">Experience</a>
             </li>
             <li>
               <a href="#Education">Education</a>
@@ -56,16 +59,16 @@ useEffect(() => {
             </li>
           </ul>
         </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" onClick={toggleOffcanvas}></span>
+      <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon" onClick={toggleOffcanvas}></span>
       </button>
-      <div class={`offcanvas offcanvas-end${showOffcanvas ? ' show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
+      <div ref={wrapperRef} className={`offcanvas offcanvas-end fadeOffcanvas${showOffcanvas ? ' show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div className="offcanvas-header">
           <div></div>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={closeOffcanvas} target="off"></button>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={closeOffcanvas} target="off"></button>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav flex-grow-1 pe-3">
+        <div className="offcanvas-body">
+          <ul className="navbar-nav flex-grow-1 pe-3">
               <li>
                 <a href="#about-me" onClick={closeOffcanvas}>About</a>
               </li>
@@ -89,7 +92,6 @@ useEffect(() => {
       </div>
     </div>
   </nav>
-  <Outlet />
   </>
   );
 }
