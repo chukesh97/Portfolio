@@ -11,7 +11,7 @@ export default function Footer() {
     }, []);
     
   return (
-    <div className="container">
+    <div className="footer">
       <div className="copy">
         <p>
           Copyright &copy;

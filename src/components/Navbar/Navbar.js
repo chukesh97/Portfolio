@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./logo.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -15,7 +15,18 @@ export default function Nav() {
   const closeOffcanvas = () => {
     setShowOffcanvas(false);
   };
-
+useEffect(() => {
+  const hideMenu = () => {
+    if (window.innerWidth > 768 && showOffcanvas) {
+      setShowOffcanvas(false);
+    }
+  };
+  window.addEventListener('resize', hideMenu);
+  return () => {
+    window.removeEventListener('resize', hideMenu);
+  }
+}
+);
 
   return (
     <nav class="navbar">
@@ -49,7 +60,7 @@ export default function Nav() {
       <div class={`offcanvas offcanvas-end${showOffcanvas ? ' show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <div></div>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={closeOffcanvas} target=""></button>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={closeOffcanvas} target="off"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav flex-grow-1 pe-3">

@@ -1,9 +1,10 @@
-.container{
+.footer{
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     height:25vh;
+    width:100%;
     background-color: #EEE9DA;
     color:#000;
 }
@@ -28,7 +29,7 @@
   /* ............Mobile.................. */
 
 @media (max-width:480px){
-  .container{
+  .footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +40,7 @@
 }
 /*............Extra small devices.............. */
 @media (min-width: 481px) and (max-width: 767px){
-  .container{
+  .footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,28 +51,28 @@
 }
 /* ............Tablet.................. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .container{
+  .footer{
     font-size:1.1rem;
 }
 
 }
 /* ............Large Tablets / Laptops .............. */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .container{
+  .footer{
     font-size:1.15rem;
 }
 
 }
 /* ............Desktops.............. */
 @media only screen and (min-width: 1200px) and (max-width: 1919px) {
-  .container{
+  .footer{
     font-size:1.2rem;
 }
 
 }
 /* ............Large Desktops.............. */
 @media (min-width: 1920px) {
-  .container{
+  .footer{
     font-size:1.5rem;
 }
 }
