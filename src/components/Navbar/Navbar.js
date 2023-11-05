@@ -60,7 +60,7 @@ export default function Nav() {
       <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon" onClick={toggleOffcanvas}></span>
       </button>
-      <div ref={wrapperRef} className={`offcanvas offcanvas-end fadeOffcanvas${showOffcanvas ? ' show' : ''}`} tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div ref={wrapperRef} className={`offcanvas offcanvas-end fadeOffcanvas${showOffcanvas ? ' show' : ''}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div className="offcanvas-header">
           <div></div>
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={closeOffcanvas} target="off"></button>

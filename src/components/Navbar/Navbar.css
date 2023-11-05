@@ -16,7 +16,7 @@
 
 }
 .navbar-brand>img{
-  height: 6rem;
+  max-width: 100%;
   mix-blend-mode:darken;
 }
 .navbar-toggler{
@@ -140,18 +140,12 @@ border-radius: 4px
 }
 /* ............Desktops.............. */
 @media only screen and (min-width: 1200px) and (max-width: 1919px) {
-  .navbar-brand>img{
-      height: 6rem;
-  }
   .navbar-toggler{
       display: none;
   }
 }
 /* ............Large Desktops.............. */
 @media (min-width: 1920px) {
-  .navbar-brand>img{
-      height: 6rem;
-  }
   .navbar-toggler{
       display: none;
   }
