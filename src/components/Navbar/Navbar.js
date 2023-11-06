@@ -15,20 +15,22 @@ export default function Nav() {
   };
 
   const toggleOffcanvas = () => {
-    setShowOffcanvas(!showOffcanvas);
-    document.body.classList.toggle('no-scroll', showOffcanvas);
-  };
+    const newShowOffcanvas = !showOffcanvas;
+    setShowOffcanvas(newShowOffcanvas);
+    document.body.classList.toggle('no-scroll', newShowOffcanvas);
+};
 
-  const closeOffcanvas = () => {
+const closeOffcanvas = () => {
     setShowOffcanvas(false);
     document.body.classList.remove('no-scroll');
-  };
-  useEffect(() => {
+};
+
+useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+        document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+}, []);
 
   return (
     <>

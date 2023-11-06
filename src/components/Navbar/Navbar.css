@@ -89,6 +89,10 @@ border-radius: 4px
 .fadeOffcanvas.show {
   opacity: 1;
 }
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
 
 /* media queries */
 /* ............Mobile.................. */
