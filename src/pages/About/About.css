@@ -2,7 +2,7 @@
     display: grid;
     justify-content: center;
     grid-template-columns: 4.5rem 0.24fr 0.3fr  1fr 3.5rem;
-    grid-template-rows: 0.8fr 5fr 0.8fr;
+    grid-template-rows: 0.5fr 5fr 0.5fr;
 }
 #about-me>div:nth-child(1){
     grid-row: 2/3;
@@ -28,6 +28,20 @@
     margin: 0;
     font-size: 1.3rem;
     color: #44484b;
+}
+#about-me>div:nth-child(2)>p>span{
+    font-size:2rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #44484b;
+}
+a:hover{
+    color: #2980b9;
 }
 
 
@@ -59,7 +73,7 @@
         display: grid;
         justify-content: center;
         grid-template-columns: 2rem 1fr 2rem;
-        grid-template-rows: 0.15fr 0.2fr 0.2fr;
+        grid-template-rows: 0.3fr 0.3fr 3fr;;
     }
 #about-me>div:nth-child(1) {
     grid-column: 2/3;
@@ -78,7 +92,7 @@
         display: grid;
         justify-content: center;
         grid-template-columns: 2rem 1fr 2rem;
-        grid-template-rows: 0.2fr 0.3fr 0.2fr;
+        grid-template-rows: 0.3fr 0.3fr 2fr;;
     }
     #about-me>div:nth-child(1) {
         grid-column: 2/3;
