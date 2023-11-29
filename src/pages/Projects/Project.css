@@ -1,6 +1,5 @@
 #projects {
     display: grid;
-    padding: 3rem 7rem;
     background-color: #bdcdd682;
     border-bottom: 1px solid #dcd9d9;
 
@@ -10,7 +9,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:0.3rem;
 
 }
 .heading{
@@ -23,59 +21,82 @@ hr{
     background-color: #3498db;
     border: none;
 }
-.project-tile {
+#projects>div:nth-child(2){
+    width:95%;
+    display: grid;
+    margin: 0px auto 50px auto;
+    grid-template-columns: repeat(3,1fr);
+
+}
+#projects>div:nth-child(2)>div{
+    gap:0.3rem;
+    border: 1px solid #dcd9d9;
+    border-radius: 5px;
+    margin: 15px 30px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
+    box-shadow: 0px 0px 10px 0px #dcd9d9;
+
 }
 
-.project-tile p {
-    font-size: 1rem;
-    color: #666;
-}
-
-.project-tile a {
-    text-decoration: none;
-    color: #3498db;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.project-tile a:hover {
-    color: #2574a9;
-}
 
 /* ...........................................media query ................................*/
-
-
-@media only screen and (max-width: 768px) {
-    #projects {
-        padding: 2rem;
-    }
-    #projects h2 {
-        font-size: 2rem;
-    }
-    .project-tile {
-        margin: 1rem;
-    }
-    .project-tile p {
-        font-size: 0.8rem;
-    }
-}
-@media only screen and (max-width: 481px) {
+/* ............Mobile.................. */
+@media only screen and (max-width: 667px) {
     #projects {
         padding: 1rem;
     }
     #projects h2 {
         font-size: 2rem;
     }
-    .project-tile {
-        margin: 1rem;
+    #projects>div:nth-child(2){
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
     }
-    .project-tile p {
-        font-size: 0.8rem;
+    #projects>div:nth-child(2)>div{
+        margin: 15px 10px;
+    }
+    #projects>div:nth-child(2)>div>img{
+        width: 100%;
+        
+        object-fit: contain;
     }
 }
+
+@media only screen and (min-width: 668px) and (max-width: 991px) {
+    #projects {
+        padding: 1rem;
+    }
+    #projects h2 {
+        font-size: 2rem;
+    }
+    #projects>div:nth-child(2){
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        border: 1px solid red;
+    }
+    #projects>div:nth-child(2)>div{
+        margin: 15px 10px;
+    
+    }
+}
+/* ............Large Tablets / Laptops .............. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #projects {
+        padding: 1rem;
+    }
+    #projects h2 {
+        font-size: 2rem;
+    }
+    #projects>div:nth-child(2){
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #projects>div:nth-child(2)>div{
+        margin: 15px 10px;
+    
+    }
+}
+
