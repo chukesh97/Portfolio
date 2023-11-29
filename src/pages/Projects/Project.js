@@ -12,7 +12,7 @@ import netflix from './netflix.jpg'
 export default function Project() {
   useEffect(() => {
     AOS.init({
-      offset: 100,
+      offset: 120,
       duration: 1000,
     });
   }, []);
