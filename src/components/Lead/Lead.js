@@ -9,7 +9,7 @@ export default function Lead() {
         <div id="welcome-section">
           <h1>Chukesh Goud</h1>
           <h2>Front-End Developer</h2>
-          <a href="https://drive.google.com/file/d/1YOeQwG0-3vsqAH10ySh9h_RPDBDOhfST/view?usp=drive_link" target="/blank" download>Download Resume</a>
+          <a href="https://drive.google.com/file/d/1xRWZpzUgbKKtDMIb9vFS16jFOvyhWn8A/view?usp=drive_link" target="/blank" download>Download Resume</a>
 
           <div className="social">
             <a
