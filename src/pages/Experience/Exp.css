@@ -1,7 +1,8 @@
 #experience{
-    height:100vh;
+    height: fit-content;
     display: grid;
-    grid-template-rows: 0.2fr 0.2fr 1fr 1fr;
+    grid-template-rows: 2rem 0.2fr auto 3rem;
+    gap:1rem;
     background-color: #bdcdd682;
     border-bottom: 1px solid #dcd9d9;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -56,10 +57,19 @@
 /*............Extra small devices.............. */
 
 @media (min-width: 481px) and (max-width: 767px){
+    #experience{
+        height: fit-content;
+        grid-template-rows: 0.1fr 0.2fr 1fr;
+    }
+    #experience>div:nth-child(2){
+        grid-area:3/1;
+        padding: 1rem;
+        gap: 1rem;
+    }
 }
 /* ............Tablet.................. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     #experience{
-        gap: 2rem;
+        height: fit-content;
     }
 }

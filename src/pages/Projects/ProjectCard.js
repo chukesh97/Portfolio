@@ -1,7 +1,8 @@
 
-import {Card, CardActions, CardContent, CardMedia, Button, Typography} from '@mui/material';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
 
-const ProjectCard = ({image,title,skills,github,view}) => {
+
+const ProjectCard = ({image,title,skills,github,view,disabled}) => {
   return (
     <Card>
       <CardMedia
@@ -21,7 +22,7 @@ const ProjectCard = ({image,title,skills,github,view}) => {
       </CardContent>
       <CardActions style={{display:'flex', justifyContent:'center'}}>
         <Button size="small" href={github} target='/blank'>Github</Button>
-        <Button size="small" href={view} target='/blank'>View</Button>
+        <Button size="small" href={view} target='/blank'disabled={disabled}>View</Button>
       </CardActions>
     </Card>
   )
