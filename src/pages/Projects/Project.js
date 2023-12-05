@@ -41,16 +41,16 @@ export default function Project() {
         <ProjectCard
            image={netflix} 
            title='Netflix login'
-           skills='REACT.JS &nbsp; HTML5 &nbsp; CSS3'
+           skills='REACT.Js &nbsp; HTML5 &nbsp; CSS3'
            github='https://github.com/chukesh97/netflix-app.git'
            view='https://chukesh97.github.io/Stopwatch/'
         />
-        {/* <ProjectCard 
-           title='landing page'
-           skills='HTML5 &nbsp; CSS3 &nbsp; JAVASCRIPT'
-           github='https://github.com/chukesh97/Stopwatch.git'
-           view='https://chukesh97.github.io/Stopwatch/'
-        /> */}
+        <ProjectCard 
+           title='To-Do App'
+           skills='REACT.Js &nbsp; CSS3'
+           github='https://github.com/chukesh97/todo-app.git'
+           view='https://chukesh97.github.io/todo-app/'
+        />
       </div>
     </div>
   );
