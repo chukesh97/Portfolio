@@ -62,6 +62,7 @@ export default function Project() {
            skills='REACT.JS, &nbsp; JSX, &nbsp; CSS3'
            github='https://github.com/chukesh97/netflix-app.git'
            view='https://chukesh97.github.io/Stopwatch/'
+           disabled={true}
         />
         <ProjectCard 
            image={Flipkart}
