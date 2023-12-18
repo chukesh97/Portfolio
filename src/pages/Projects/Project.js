@@ -6,10 +6,10 @@ import "aos/dist/aos.css";
 // components
 import ProjectCard from "./ProjectCard";
 import stopwatch from './stopwatch.jpg'
+import quiz from './quiz.jpg'
 import landing from './landing.jpg'
 import netflix from './netflix.jpg'
 import Todo from './Todo.jpg'
-// import Quiz from './Quiz.jpg'
 import Flipkart from './Flipkart.jpg'
 
 export default function Project() {
@@ -42,10 +42,10 @@ export default function Project() {
            view='https://chukesh97.github.io/Stopwatch/'
         />
         <ProjectCard 
-           image=''
+           image={quiz}
            title='Quiz App'
            skills='REACT.JS, &nbsp; JSX, &nbsp; CSS3'
-           github='https://github.com/chukesh97/Google-search-page.git'
+           github='https://github.com/chukesh97/quiz.git'
            view='https://chukesh97.github.io/Google-search-page/'
            disabled={true}
         />
