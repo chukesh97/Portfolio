@@ -10,9 +10,9 @@ export default function Exp() {
       <div>
         <div>
           <h3>Software Engineer</h3>
-          <h4>Fineant Consultant Servies</h4>
-          <h5>2023 - Present</h5>
-          <p>As a software engineer, my primary responsibility is to design, develop, and maintain software applications that meet the needs of our clients. This involves working closely with other members of the development team to understand project requirements, identify potential issues, and develop solutions that are both efficient and effective.</p>
+          <h4>Fineant Consultant Servies (Internship)</h4>
+          <h5> Oct 2023 - Jan 2024</h5>
+          <p>Collaborate with cross-functional teams to design, develop, and maintain software applications that align with client objectives, ensuring innovative, efficient, and scalable solutions. Proactively identify and resolve potential issues to meet project goals and deliver high-quality results.</p>
         </div>
       </div>
     </div>
